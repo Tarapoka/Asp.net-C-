@@ -22,3 +22,10 @@ namespace BulkyBookWeb.Data
         public DbSet<Category> Categories { get; set; }
     }
 }
+
+// on program.cs put this code 
+builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(
+    builder.Configuration.GetConnectionString("DefaultConnection")
+    
+    ));
+    // instal microsoft.entityFrameworkCore
