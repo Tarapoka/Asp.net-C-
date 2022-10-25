@@ -29,3 +29,4 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlSer
     
     ));
     // instal microsoft.entityFrameworkCore
+    // instal Microsoft.entityframeworkcoreTools
