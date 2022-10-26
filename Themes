@@ -1,0 +1,8 @@
+go to Bootswatch
+Add css file called bootswatch in wwwroot in css file
+download bootswatch.css copy the code paste it to css file you just created
+replace the bootstrap theme with bootswatch theme link on layout
+go to bootstrap 5 form get started and introduction then copy bundle link
+past it on layout below replace bootstrap bundle
+
+copy navbar 
