@@ -30,3 +30,13 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlSer
     ));
     // instal microsoft.entityFrameworkCore
     // instal Microsoft.entityframeworkcoreTools
+
+
+Another connection string
+<!--<connectionStrings>
+    <add name="Myconnection" connectionString="Data Source=localhost;Initial Catalog=DLCA;Integrated Security=True" providerName="System.Data.SqlClient"/>
+  </connectionStrings>-->
+  
+  <connectionStrings>
+    <add name="Myconnection" connectionString="Data Source=10.129.10.98;Initial Catalog=DLCA;User ID=sa;Password=P@ssw0rd;Integrated Security=True" providerName="System.Data.SqlClient"/>
+  </connectionStrings
