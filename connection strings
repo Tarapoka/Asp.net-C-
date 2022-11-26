@@ -6,7 +6,9 @@
   },
 
 After connecting the connection string create a data file and use this file
-//Data File
+//Data folder
+
+Create ApplicationDBContext file
 
 using BulkyBookWeb.Models;
 using Microsoft.EntityFrameworkCore;
