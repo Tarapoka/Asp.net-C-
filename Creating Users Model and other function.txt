@@ -1,0 +1,46 @@
+=> Creating Login Page
+Create a model called ApplicationUser
+add fullname string and display full name
+Check the version inside packages
+Instal a package called Microsoft.aspnetcore.identity.entityframeworkcore
+Go to Data in DbContaxt file chage DBcontaxt to IdentityDbContaxt
+pass applicationUser in IdentitiyDbContext =>IdentityDbContext<ApplicationUser>
+then Add Migration and update database
+
+=>Seeding the role
+Add a class name AppDbInitializer inside data file
+Copy the code in addDbInitializer from Webapplication1 
+Go to program.cs after patten and add :
+
+//code
+AppDbInitializer.SeedUsersAndRolesAsync(app).Wait();
+
+
+
+=> inside Data create a static class called userRoles
+Paste this code 
+
+//code
+    public static class UserRoles
+    {
+        public const string Admin = "Admin";
+        public const string User = "User";
+    }
+
+=>inside program.cs add Authentication and authorization
+//Athentication and authorization Code
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<WebApplication1Context>();
+builder.Services.AddMemoryCache();
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+});
+
+=>Bottum at the app. use this code
+//code
+//Authorisation and Authentication
+app.UseAuthentication();
+app.UseAuthorization();
+
+then run your system
+
